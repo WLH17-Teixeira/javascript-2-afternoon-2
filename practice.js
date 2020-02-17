@@ -133,9 +133,20 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   and the second item in the array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider (numbersArray){
+  let evens = [];
+  let odds = [];
 
+  for (let i=0; i < numbersArray.length; i++){
+    if(numbersArray[i] % 2 ===0){      
+      evens.push(numbersArray[i])
+    } else{
+      odds.push(numbersArray[i])
+    }
+  } return [evens,odds]
+}
 
+// console.log(numbersArray())
 
 ////////// PROBLEM 7 //////////
 
@@ -156,7 +167,25 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 
+function finder(array){
+  let randomNumber = getRandomArbitrary()
+  
+  for (let i=0; i<array.length; i++){
+    console.log(array[i])
+    if(randomNumber === array[i]){
+      console.log(i)
+      return true
+    } 
+  }
+  return false;
+}
+
+
+console.log(finder(numbers))
+
+//never have else return inside a for loop
 
 
 ////////// PROBLEM 8 //////////
